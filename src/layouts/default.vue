@@ -1,11 +1,9 @@
 <script setup>
-
 import { ref } from 'vue'
 // import { useDisplay } from 'vuetify';
 
 // const { mdAndDown } = useDisplay()
 const drawer = ref(true)
-
 
 // Watcher on smAndUp
 // watch(mdAndDown, (value) => {

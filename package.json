@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "check": "biome check src/",
+    "format": "biome format --write src/"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -15,6 +17,7 @@
     "vue": "latest"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "vite-plugin-vuetify": "^2.0.3",
     "vuetify": "^3.6.11"
   }
