@@ -1,17 +1,17 @@
 <script setup>
 import { ref } from 'vue'
-// import { useDisplay } from 'vuetify';
+import { useDisplay } from 'vuetify'
 
-// const { mdAndDown } = useDisplay()
-const drawer = ref(true)
+const { mdAndDown } = useDisplay()
+const drawer = ref(null)
 
 // Watcher on smAndUp
-// watch(mdAndDown, (value) => {
-//     console.log('smAndUp', value)
-//     if (value) {
-//         drawer.value = true
-//     }
-// })
+onMounted(() => {
+  console.log('Mounted')
+  // if (mdAndDown) {
+  //   drawer.value = false
+  // }
+})
 </script>
 <template>
   <v-app>
@@ -26,14 +26,21 @@ const drawer = ref(true)
           <v-btn variant="text" class="font-weight-light" to="/">START</v-btn>
         </div>
         <!-- Blog & Docs -->
-        <div class="my-1">
-          <v-btn variant="text" class="font-weight-light" disabled>Blog & Docs</v-btn>
-        </div>
         <!-- W-Helfer (utilities für den Alltag ) -->
         <div class="my-1">
           <v-btn variant="text" class="" to="/about" disabled>
             <template v-slot:append>
-              <v-badge class="ms-2 mb-4" color="amber" content="APP">
+              <v-badge class="ms-2 mb-4" color="purple" content="Soon!">
+              </v-badge>
+            </template>
+            <!-- <span class="text-primary font-weight-bold">W</span> -->
+            <span>Blog & DOCS</span>
+          </v-btn>
+        </div>
+        <div class="my-1">
+          <v-btn variant="text" class="" to="/about" disabled>
+            <template v-slot:append>
+              <v-badge class="ms-2 mb-4" color="purple" content="Soon!">
               </v-badge>
             </template>
             <span class="text-primary font-weight-bold">W</span><span>-Helfer</span>
@@ -80,7 +87,7 @@ const drawer = ref(true)
 
     <v-main>
 
-      <v-fab @click="drawer = !drawer" :active="$vuetify.display.smAndDown" icon="mdi-menu" location="top right" variant="tonal" app>
+      <v-fab @click="drawer = !drawer" :active="$vuetify.display.smAndDown" icon="mdi-menu" location="top right" variant="tonal" app style="top: 0.5rem; right: 0.5rem">
       </v-fab>
       <slot />
     </v-main>
