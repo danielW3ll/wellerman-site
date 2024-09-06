@@ -6,7 +6,129 @@ definePageMeta({
 </script>
 <template>
   <v-app>
-    <!-- Hero -->
+    <v-container class="">
+
+
+      <v-row justify="space-around" style="height: 100vh;">
+        <v-col lg="6" class="" align-self="center">
+          <v-card variant="elevated" class="pa-2 ma-2" color="dark">
+            <v-card-title class="">
+              <p class="">BIM-Magier und Maker</p>
+            </v-card-title>
+            <v-card-text>
+              <p>
+                Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
+                <br>
+                Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
+                Linux
+                verbinde ich technisches Know-how mit IT-Expertise. <br>
+                Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
+                gesamten BIM-Prozess zu optimieren.
+                <br>
+                Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
+              </p>
+              <br>
+              <p>Herzlich Willkommen</p>
+              <i class="font-weight-bold text-primary">Daniel Wellermann</i>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col class="d-flex flex-column justify-center" lg="4" align-self="center">
+          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 ">
+          </v-img>
+          <div class="d-flex justify-center align-center pt-5">
+            <v-btn icon href="https://github.com/danielW3ll" target="_blank" class="mx-3" color="primary">
+              <v-icon>mdi-github</v-icon>
+            </v-btn>
+            <v-btn icon href="https://de.linkedin.com/in/wellermann" target="_blank" class="mx-3" color="primary">
+              <v-icon>mdi-linkedin</v-icon>
+            </v-btn>
+            <v-btn icon href="https://www.instagram.com/daniel_wellermann" target="_blank" class="mx-3" color="primary">
+              <v-icon>mdi-instagram</v-icon>
+            </v-btn>
+          </div>
+        </v-col>
+      </v-row>
+      <v-responsive class="">
+        <p class="text-primary"> BIM Fachgetrieben</p>
+        <p class="font-weight-bold"> Gesamtkoordinator und Entwickler </p>
+        <p class="text-body-1 text-medium-emphasis">
+          Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein
+          Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
+          <br>
+          <b>#1 Open BIM-Modelle & Kollaborationsplattformen</b>
+          <br>
+          Ein wesentlicher Teil meiner Arbeit besteht darin, Open BIM-Modelle aus verschiedenen Autorensystemen zu konsolidieren und in eine zentrale Kollaborationsplattform zu integrieren – alles
+          basierend auf dem IFC-Format.
+
+          Kollisionsprüfungen und Attributsprüfungen spielen in diesem Prozess eine entscheidende Rolle. Ich stelle sicher, dass alle relevanten Informationen und Daten konsistent und korrekt in den
+          Modellen vorhanden sind. Diese beiden Prüfungen sind entscheidend, um die Qualität und Integrität der BIM-Modelle zu gewährleisten und das Risiko von Fehlern im Bauprozess zu minimieren.
+
+          Als langjähriger Polier und Vorarbeiter auf dem Bau weiß ich nur zu gut, wie teuer eine nachträgliche Kernbohrung sein kann!
+          Entwicklung von Tools & Plugins für DESITE
+
+          Der zweite Schwerpunkt meiner Tätigkeit liegt in der Entwicklung maßgeschneiderter Tools und Plugins für das Programm DESITE / VDC Manager. Mit einem besonderen Fokus auf
+          Automatisierungsmethoden und einer benutzerfreundlichen Benutzeroberfläche (UI) entwickle ich Lösungen, die den Umgang mit BIM-Daten erheblich erleichtern. Meine Tools ermöglichen es den
+          Nutzern, wiederkehrende Aufgaben zu automatisieren und komplexe Daten auf intuitive Weise zu visualisieren, was die Effizienz und Genauigkeit der Projektarbeit steigert.
+
+          Durch die Kombination dieser beiden Tätigkeitsfelder trage ich maßgeblich zur Verbesserung der BIM-Prozesse und zur erfolgreichen Durchführung von Bauprojekten bei.
+        </p>
+      </v-responsive>
+      <v-row justify="space-around">
+        <v-col lg="6" class="">
+          <v-card variant="elevated" class="pa-2 ma-2" color="dark">
+            <v-card-title class="">
+              <p class="">BIM Fachgetrieben!</p>
+            </v-card-title>
+            <v-card-subtitle>
+              DDD meets
+            </v-card-subtitle>
+            <v-card-text>
+              <p>
+                Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
+                <br>
+                Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
+                Linux
+                verbinde ich technisches Know-how mit IT-Expertise. <br>
+                Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
+                gesamten BIM-Prozess zu optimieren.
+                <br>
+                Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
+              </p>
+              <br>
+              <p>Herzlich Willkommen</p>
+              <i class="font-weight-bold text-primary">Daniel Wellermann</i>
+            </v-card-text>
+          </v-card>
+        </v-col>
+        <v-col lg="6">
+          <v-card variant="elevated" class="pa-2 ma-2" color="dark">
+            <v-card-title class="">
+              <p class="">Leidenschaftlicher Macher!</p>
+            </v-card-title>
+            <v-card-subtitle>
+              Mit Maschinen, GNU/Linux, 3D-Druck und Go-Vue.js
+            </v-card-subtitle>
+            <v-card-text>
+              <p>
+                Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
+                <br>
+                Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
+                Linux
+                verbinde ich technisches Know-how mit IT-Expertise. <br>
+                Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
+                gesamten BIM-Prozess zu optimieren.
+                <br>
+                Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
+              </p>
+              <br>
+              <p>Herzlich Willkommen</p>
+              <i class="font-weight-bold text-primary">Daniel Wellermann</i>
+            </v-card-text>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
     <section>
       <v-responsive class="">
         <!-- background  -->

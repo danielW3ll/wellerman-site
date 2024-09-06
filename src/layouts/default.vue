@@ -21,6 +21,9 @@ onMounted(() => {
         <h2 class="text-h2 font-weight-black text-primary mb-2">DW</h2>
         <div class="text-h5 mb-2">Daniel Wellermann</div>
         <p class="font-weight-thin mb-5">BIM-Magier und Maker</p>
+        <!-- <v-list-item link title="List Item 1"></v-list-item>
+        <v-list-item link title="List Itemsadasdasd 2"></v-list-item>
+        <v-list-item link title="List Item 3"></v-list-item> -->
         <!-- About Me -->
         <div class="my-1">
           <v-btn variant="text" class="font-weight-light" to="/">START</v-btn>
@@ -33,7 +36,7 @@ onMounted(() => {
               <v-badge class="ms-2 mb-4" color="purple" content="Soon!">
               </v-badge>
             </template>
-            <!-- <span class="text-primary font-weight-bold">W</span> -->
+            <span class="text-primary font-weight-bold">W</span>
             <span>Blog & DOCS</span>
           </v-btn>
         </div>
@@ -74,6 +77,7 @@ onMounted(() => {
           </v-btn>
         </div>
       </v-row>
+
     </v-navigation-drawer>
     <!-- <v-app-bar v-if="$vuetify.display.smAndDown" collapse elevation="7" class="">
       <template v-slot:prepend>
