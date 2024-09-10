@@ -91,9 +91,12 @@ onMounted(() => {
 
     <v-main>
 
-      <v-fab @click="drawer = !drawer" :active="$vuetify.display.smAndDown" icon="mdi-menu" location="top right" variant="tonal" app style="top: 0.5rem; right: 0.5rem">
-      </v-fab>
+      <!-- <v-fab @click="drawer = !drawer" icon="mdi-menu" location="top right" variant="tonal" app style="top: 0.5rem; right: 0.5rem"> -->
+      <!-- <v-fab @click="drawer = !drawer" :active="!$vuetify.display.smAndDown" icon="mdi-menu" location="top end" size="64" app appear color="primary">
+      </v-fab> -->
       <slot />
+      <v-fab @click="drawer = !drawer" :active="$vuetify.display.smAndDown" icon="mdi-menu" location="bottom end" size="64" app appear color="primary">
+      </v-fab>
     </v-main>
   </v-app>
 </template>
