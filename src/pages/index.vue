@@ -41,8 +41,16 @@ const jobHistory = [
     company: 'PLANSITE',
     startDate: '2022-01',
     endDate: 'now',
-    description: 'Erstellen und Koordinieren von Kollaborations BIM-Modelle. Entwicklung neuer Anwendungsfälle, Prozesse und BIM-Tools. DESITE MD, Addon (Formular) Konzeptionierung und Programmierung.',
-    skills: ['Open BIM', 'Building Information Modeling (BIM)', 'Softwareentwicklung', 'Baugewerbe', 'BIM-Koordination', 'IFC'],
+    description:
+      'Erstellen und Koordinieren von Kollaborations BIM-Modelle. Entwicklung neuer Anwendungsfälle, Prozesse und BIM-Tools. DESITE MD, Addon (Formular) Konzeptionierung und Programmierung.',
+    skills: [
+      'Open BIM',
+      'Building Information Modeling (BIM)',
+      'Softwareentwicklung',
+      'Baugewerbe',
+      'BIM-Koordination',
+      'IFC',
+    ],
   },
   {
     title: 'BIM Coordinator',
@@ -50,15 +58,28 @@ const jobHistory = [
     startDate: '2021-01',
     endDate: '2022-01',
     description: 'Erstellen und Koordinieren von Kollaborations BIM-Modelle.',
-    skills: ['Open BIM', 'Building Information Modeling (BIM)', 'Softwareentwicklung', 'Baugewerbe', 'BIM-Koordination', 'IFC'],
+    skills: [
+      'Open BIM',
+      'Building Information Modeling (BIM)',
+      'Softwareentwicklung',
+      'Baugewerbe',
+      'BIM-Koordination',
+      'IFC',
+    ],
   },
   {
     title: 'Vorarbeiter / Teamleiter',
     company: 'Brüninghoff Group',
     startDate: '2013-10',
     endDate: '2021-01',
-    description: 'Vorarbeiter / Teamleiter im Hochbau. Primär für Sonder und Hybrid Konstruktionen.',
-    skills: ['Open BIM', 'Polier', 'Building Information Modeling (BIM)', 'Baugewerbe'],
+    description:
+      'Vorarbeiter / Teamleiter im Hochbau. Primär für Sonder und Hybrid Konstruktionen.',
+    skills: [
+      'Open BIM',
+      'Polier',
+      'Building Information Modeling (BIM)',
+      'Baugewerbe',
+    ],
   },
   {
     title: 'Metallbauer/Monteur',
@@ -81,7 +102,9 @@ const jobHistory = [
 const calculateDuration = (startDate, endDate) => {
   let end
   if (endDate === 'now') {
-    end = new Date(new Date().toISOString().split('T')[0].split('-').slice(0, 2).join('-'))
+    end = new Date(
+      new Date().toISOString().split('T')[0].split('-').slice(0, 2).join('-'),
+    )
   } else {
     end = new Date(endDate)
   }
