@@ -68,9 +68,6 @@ const jobHistory = [
   },
 ]
 
-const panel1 = ref('foo')
-const panel2 = [0]
-
 const calculateDuration = (startDate, endDate) => {
   let end
   if (endDate === 'now') {
@@ -99,26 +96,7 @@ const formatDuration = (y) => {
     <v-container class="" style="margin-top: 4rem; margin-bottom: 4rem;">
       <v-row justify="space-around">
         <v-col cols="12" md="6" class="" align-self="center">
-
-          <div class="text-left">
-            <p class="text-primary font-weight-medium pb-1">BIM-Magier und Maker</p>
-            <p class="text-h4 ont-weight-bold mb-4">Moin, </p>
-            <p class="text-subtitle-2 text-medium-emphasis mb-6">
-              Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
-              <br>
-              Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
-              Linux
-              verbinde ich technisches Know-how mit IT-Expertise. <br>
-              Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
-              gesamten BIM-Prozess zu optimieren.
-              <br>
-              Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
-            </p>
-            <br>
-            <p>Herzlich Willkommen</p>
-            <i class="text-primary text-h5">Daniel Wellermann</i>
-          </div>
-          <!-- <v-card variant="elevated" class="pa-2 ma-2" color="dark">
+          <v-card variant="elevated" class="pa-2 ma-2" color="dark">
             <v-card-title class="">
               <p class="">BIM-Magier und Maker</p>
             </v-card-title>
@@ -138,7 +116,7 @@ const formatDuration = (y) => {
               <p>Herzlich Willkommen</p>
               <i class="text-primary text-h5">Daniel Wellermann</i>
             </v-card-text>
-          </v-card> -->
+          </v-card>
         </v-col>
         <v-col class="d-flex flex-column justify-center" cols="7" lg="4" align-self="center">
           <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 ">
@@ -162,8 +140,8 @@ const formatDuration = (y) => {
       <v-row justify="center" class="">
         <v-col class="border-b">
           <div>
-            <p class="text-primary text-center font-weight-bold text-h3 ">Mein Beruf</p>
-            <p class="text-center text-body-1">BIM-Gesamtkoordinator/Entwickler bei PLANSITE</p>
+            <p class="text-primary text-center font-weight-bold text-h3 ">BERUF</p>
+            <p class="text-center text-body-1">Aktuelles und Berufliche Reise</p>
             <!-- <p class="text-body-1 text-medium-emphasis">
             Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein
             Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
@@ -177,10 +155,10 @@ const formatDuration = (y) => {
 
       <v-row justify="space-around">
 
-        <v-col class="d-flex flex-column justify-center" cols="12" md="12" align-self="center">
+        <v-col class="d-flex flex-column justify-center" cols="12" md="6" align-self="center">
           <p class="text-center">BIM-Gesamtkoordinator/Entwickler bei Plansite</p>
-          <v-expansion-panels v-model="panel1" class="my-4" variant="popout">
-            <v-expansion-panel value="foo" text='
+          <v-expansion-panels class="my-4" variant="popout">
+            <v-expansion-panel text='
                 Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
 Open BIM-Modelle & Kollaborationsplattformen
 Ein wesentlicher Teil meiner Arbeit besteht darin, Open BIM-Modelle aus verschiedenen Autorensystemen zu konsolidieren und in eine zentrale Kollaborationsplattform zu integrieren – alles basierend auf dem IFC-Format.
@@ -194,11 +172,11 @@ Der zweite Schwerpunkt meiner Tätigkeit liegt in der Entwicklung maßgeschneide
 
 Durch die Kombination dieser beiden Tätigkeitsfelder trage ich maßgeblich zur Verbesserung der BIM-Prozesse und zur erfolgreichen Durchführung von Bauprojekten bei.' title="BIM Gesamtkoordinator"
               </v-expansion-panel>
-              <v-expansion-panel value="bar" text='
+              <v-expansion-panel text='
                  Ich arbeite viel mit dem Vue.js Ökosystem.
                  ' title="BIM Entwickler">
               </v-expansion-panel>
-              <v-expansion-panel value="baz" title="PLANSITE">
+              <v-expansion-panel title="PLANSITE">
                 <v-expansion-panel-text>
                   <v-btn icon href="local" target="_blank" class="mx-3" color="primary">
                     <v-icon>mdi-github</v-icon>
@@ -206,6 +184,65 @@ Durch die Kombination dieser beiden Tätigkeitsfelder trage ich maßgeblich zur 
                 </v-expansion-panel-text>
               </v-expansion-panel>
           </v-expansion-panels>
+        </v-col>
+        <v-col cols="12" md="6" class="" align-self="center">
+          <v-timeline align="start" side="start">
+            <v-timeline-item v-for="job in jobHistory" :key="job.title" dot-color="primary" size="small">
+
+              <div class="text-right ">
+                <p class="">{{ job.title }} </p>
+                <div class="d-flex align-center ">
+                  <!-- <strong class="me-2 text-right">{{ job.title }}</strong> -->
+                  <!-- Icon for dialog -->
+                  <!-- <v-dialog max-width="800">
+                    <template v-slot:activator="{ props: activatorProps }">
+                      <v-btn v-bind="activatorProps" density="compact" icon="mdi-information"></v-btn>
+                    </template>
+
+<template v-slot:default="{ isActive }">
+                      <v-card>
+                        <v-card-title>
+                          {{ job.title }}
+                        </v-card-title>
+                        <v-card-text>
+                          <h4 class="text-secondary">{{ job.company }}</h4>
+
+                          <span class="text-body-1"> {{ formatDuration(calculateDuration(job.startDate, job.endDate))[0] }} Jahre
+                            {{ formatDuration(calculateDuration(job.startDate, job.endDate))[1] }} Monate
+                          </span>
+                          <span class="text-caption">{{ job.startDate }} - {{ job.endDate }}</span>
+                          <br>
+                          <br>
+                          <p>{{ job.description }}</p>
+
+                        </v-card-text>
+
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+
+                          <v-btn @click="isActive.value = false" icon="mdi-close" </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </template>
+</v-dialog> -->
+                </div>
+                <div class="text-secondary">
+                  {{ job.company }}
+                </div>
+                <div class="text-caption">
+
+                  {{ formatDuration(calculateDuration(job.startDate, job.endDate))[0] }} Jahre
+                  {{ formatDuration(calculateDuration(job.startDate, job.endDate))[1] }} Monate
+                  <br>
+                  {{ job.startDate }} - {{ job.endDate }}
+                </div>
+                <div class="">
+                  <!-- {{ job.description }} -->
+                </div>
+              </div>
+            </v-timeline-item>
+            <!-- linkedIn Button -->
+          </v-timeline>
         </v-col>
       </v-row>
     </v-container>

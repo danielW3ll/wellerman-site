@@ -35,10 +35,9 @@ definePageMeta({
               <v-card class="pa-3 elevation-10 ">
                 <h4 class="text-h4 text-primary mb-8">Wer ich bin</h4>
                 <p>
-                  Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen. Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
-                  Linux
-                  verbinde ich technisches Know-how mit IT-Expertise. Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
-                  gesamten BIM-Prozess zu optimieren. Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.</p>
+                  Ich bin BIM-Koordinator und Entwickler bei PLANSITE mit einer Leidenschaft für innovative Lösungen im Bauwesen.Mein Fokus liegt auf der Koordination und Prüfung von Open BIM-Modellen
+                  und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
+                  mehrwert von Open BIM-Modelle zu erhöhen. Zu meinem Hauptätigkeit beschäftige ich mich mit allerhand Themen rund um IT. z.Z </p>
                 <br>
                 <p>Herzlich Willkommen</p>
                 <i class="font-weight-bold text-primary">Daniel Wellermann</i>
