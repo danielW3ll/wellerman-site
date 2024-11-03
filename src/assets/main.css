@@ -3,6 +3,24 @@ body {
   font-family: 'Rubik', sans-serif;
 }
 
+.elementToFadeInAndOut {
+  animation: fadeInOut 1s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /* rubik-300 - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

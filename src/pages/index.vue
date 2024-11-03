@@ -1,268 +1,117 @@
 <script setup>
-import { ref } from 'vue'
 definePageMeta({
   layout: 'default',
 })
 
-const jobHistory = [
+const socials = [
   {
-    title: 'BIM Coordinator/Developer',
-    company: 'PLANSITE',
-    startDate: '2022-01',
-    endDate: 'now',
-    description:
-      'Erstellen und Koordinieren von Kollaborations BIM-Modelle. Entwicklung neuer Anwendungsfälle, Prozesse und BIM-Tools. DESITE MD, Addon (Formular) Konzeptionierung und Programmierung.',
-    skills: [
-      'Open BIM',
-      'Building Information Modeling (BIM)',
-      'Softwareentwicklung',
-      'Baugewerbe',
-      'BIM-Koordination',
-      'IFC',
-    ],
+    icon: 'mdi-linkedin',
+    href: 'https://www.linkedin.com/in/wellermann/',
   },
   {
-    title: 'BIM Coordinator',
-    company: 'Brüninghoff Group',
-    startDate: '2021-01',
-    endDate: '2022-01',
-    description: 'Erstellen und Koordinieren von Kollaborations BIM-Modelle.',
-    skills: [
-      'Open BIM',
-      'Building Information Modeling (BIM)',
-      'Softwareentwicklung',
-      'Baugewerbe',
-      'BIM-Koordination',
-      'IFC',
-    ],
+    icon: 'mdi-instagram',
+    href: 'https://www.instagram.com/daniel_wellermann/',
   },
   {
-    title: 'Vorarbeiter / Teamleiter',
-    company: 'Brüninghoff Group',
-    startDate: '2013-10',
-    endDate: '2021-01',
-    description:
-      'Vorarbeiter / Teamleiter im Hochbau. Primär für Sonder und Hybrid Konstruktionen.',
-    skills: [
-      'Open BIM',
-      'Polier',
-      'Building Information Modeling (BIM)',
-      'Baugewerbe',
-    ],
+    icon: 'mdi-facebook',
+    href: 'https://www.facebook.com/wellermann.daniel',
   },
   {
-    title: 'Metallbauer/Monteur',
-    company: 'Brüninghoff Group',
-    startDate: '2010-02',
-    endDate: '2013-10',
-    description: '',
-    skills: ['Baugewerbe'],
-  },
-  {
-    title: 'Ausbildung zum Metallbauer',
-    company: 'Brüninghoff Group',
-    startDate: '2006-08',
-    endDate: '2010-02',
-    description: '',
-    skills: [],
+    icon: 'mdi-github',
+    href: 'https://github.com/danielW3ll',
   },
 ]
 
-const panel1 = ref('foo')
-const panel2 = [0]
-
-const calculateDuration = (startDate, endDate) => {
-  let end
-  if (endDate === 'now') {
-    end = new Date(
-      new Date().toISOString().split('T')[0].split('-').slice(0, 2).join('-'),
-    )
-  } else {
-    end = new Date(endDate)
-  }
-  const start = new Date(startDate)
-  const diff = end - start
-  const years = diff / (1000 * 60 * 60 * 24 * 365)
-  return years
-}
-
-const formatDuration = (y) => {
-  // Reuurn Years and Months as Array
-  const years = Math.floor(y)
-  const months = Math.floor((y - years) * 12)
-
-  return [years, months]
-}
+const menue = [
+  {
+    icon: 'mdi-home-outline',
+    text: '~/',
+    href: '/',
+  },
+  {
+    icon: 'mdi-post-outline',
+    text: '~/docs',
+    href: '/blog',
+  },
+  {
+    icon: 'mdi-account-box-outline',
+    text: '~/msg',
+    href: '/contact',
+  },
+]
 </script>
 <template>
-  <v-app>
-    <v-container class="" style="margin-top: 4rem; margin-bottom: 4rem;">
-      <v-row justify="space-around">
-        <v-col cols="12" md="6" class="" align-self="center">
 
-          <div class="text-left">
-            <p class="text-primary font-weight-medium pb-1">BIM-Magier und Maker</p>
-            <p class="text-h4 ont-weight-bold mb-4">Moin, </p>
-            <p class="text-subtitle-2 text-medium-emphasis mb-6">
-              Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
-              <br>
-              Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
-              Linux
-              verbinde ich technisches Know-how mit IT-Expertise. <br>
-              Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
-              gesamten BIM-Prozess zu optimieren.
-              <br>
-              Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
-            </p>
-            <br>
-            <p>Herzlich Willkommen</p>
-            <i class="text-primary text-h5">Daniel Wellermann</i>
-          </div>
-          <!-- <v-card variant="elevated" class="pa-2 ma-2" color="dark">
-            <v-card-title class="">
-              <p class="">BIM-Magier und Maker</p>
-            </v-card-title>
-            <v-card-text>
-              <p>
-                Ich bin BIM-Koordinator und Entwickler mit einer Leidenschaft für innovative Lösungen im Bauwesen.
-                <br>
-                Mit meiner Erfahrung als Polier/Teamleiter und meiner langjährigen Affinität zu
-                Linux
-                verbinde ich technisches Know-how mit IT-Expertise. <br>
-                Mein Fokus liegt auf der Konsolidierung von Open BIM-Modellen und der Entwicklung benutzerfreundlicher Tools für DESITE, um den
-                gesamten BIM-Prozess zu optimieren.
-                <br>
-                Als erfahrener Maker nutze ich 3D-Druck und Automatisierung, um smarte und funktionale Lösungen für den Alltag zu schaffen.
-              </p>
-              <br>
-              <p>Herzlich Willkommen</p>
-              <i class="text-primary text-h5">Daniel Wellermann</i>
-            </v-card-text>
-          </v-card> -->
-        </v-col>
-        <v-col class="d-flex flex-column justify-center" cols="7" lg="4" align-self="center">
-          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 ">
-          </v-img>
-          <div class="d-flex justify-center align-center mt-5">
-            <v-btn icon href="https://github.com/danielW3ll" target="_blank" class="mx-3" color="primary">
-              <v-icon>mdi-github</v-icon>
+
+  <!-- HEader Menü Sticky -->
+  <v-main class="">
+    <v-container class="h-100 d-flex align-center justify-center ">
+
+
+      <div class="w-100 w-md-50 text-center">
+
+        <div class="d-flex justify-center " align-self="center">
+          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 " style="max-width: 250px;"></v-img>
+        </div>
+
+        <!-- <v-chip border="thin opacity-25" color="surface" variant="flat">
+          <span class="hidden-sm-and-down">Announcing our</span> <span class="hidden-md-and-up">Our&nbsp;</span> next round of funding. Click <a
+            class="d-inline-block mx-1 text-decoration-none text-primary" href="#">here</a> to learn more.
+        </v-chip> -->
+
+
+
+        <h1 class="text-h4 text-h3 font-weight-bold my-6">
+          Die Effizienz von einem, das Talent von drei.
+        </h1>
+
+        <div class="text-body-1  ">
+          BIM-Koordinator, Entwickler und Maker!
+        </div>
+        <div class="text-body-1 text-medium-emphasis mb-10">
+          Bissl zu wild der Slogan oder? Ich denk mir noch was neues aus. Aber das trifft es schon ganz gut.
+        </div>
+        <!-- <div class="text-body-1 text-medium-emphasis mb-10">
+          Mit meiner Erfahrung auf dem Bau und meiner langjährigen Affinität zu GNU/Linux und IT steht die Fachlichkeit bei der Digitalisierung im Vordergrund.
+        </div> -->
+
+        <div class="d-flex ga-4 justify-space-around">
+          <v-card color="" class="pa-3 rounded-lg d-flex ">
+            <v-btn v-for="social in socials" :key="social.icon" icon :href="social.href" target="_blank" class=" mx-2 border border-opacity-100 text-none text-primary" variant="outlined">
+              <v-icon>{{ social.icon }}</v-icon>
             </v-btn>
-            <v-btn icon href="https://de.linkedin.com/in/wellermann" target="_blank" class="mx-3" color="primary">
-              <v-icon>mdi-linkedin</v-icon>
-            </v-btn>
-            <v-btn icon href="https://www.instagram.com/daniel_wellermann" target="_blank" class="mx-3" color="primary">
-              <v-icon>mdi-instagram</v-icon>
-            </v-btn>
-          </div>
-        </v-col>
-      </v-row>
+          </v-card>
+          <!-- <v-btn class="text-none" color="primary" flat rounded="lg" text="Get started" />
+
+          <v-btn append-icon="mdi-chevron-right" class="text-none" flat rounded="lg" text="Learn more" /> -->
+        </div>
+
+        <div class="text-body-1 my-6">
+          <span>
+            Seite befindet sich noch im Aufbau
+          </span>
+          <span class="text-primary">
+            ;)
+          </span>
+        </div>
+
+      </div>
+
+
     </v-container>
-    <v-container class="">
-
-      <v-row justify="center" class="">
-        <v-col class="border-b">
-          <div>
-            <p class="text-primary text-center font-weight-bold text-h3 ">Mein Beruf</p>
-            <p class="text-center text-body-1">BIM-Gesamtkoordinator/Entwickler bei PLANSITE</p>
-            <!-- <p class="text-body-1 text-medium-emphasis">
-            Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein
-            Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
-            <br>
-            <b>#1 Open BIM-Modelle & Kollaborationsplattformen</b>
-            <br>
-          </p> -->
-          </div>
-        </v-col>
-      </v-row>
-
-      <v-row justify="space-around">
-
-        <v-col class="d-flex flex-column justify-center" cols="12" md="12" align-self="center">
-          <p class="text-center">BIM-Gesamtkoordinator/Entwickler bei Plansite</p>
-          <v-expansion-panels v-model="panel1" class="my-4" variant="popout">
-            <v-expansion-panel value="foo" text='
-                Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
-Open BIM-Modelle & Kollaborationsplattformen
-Ein wesentlicher Teil meiner Arbeit besteht darin, Open BIM-Modelle aus verschiedenen Autorensystemen zu konsolidieren und in eine zentrale Kollaborationsplattform zu integrieren – alles basierend auf dem IFC-Format.
-
-Kollisionsprüfungen und Attributsprüfungen spielen in diesem Prozess eine entscheidende Rolle. Ich stelle sicher, dass alle relevanten Informationen und Daten konsistent und korrekt in den Modellen vorhanden sind. Diese beiden Prüfungen sind entscheidend, um die Qualität und Integrität der BIM-Modelle zu gewährleisten und das Risiko von Fehlern im Bauprozess zu minimieren.
-
-Als langjähriger Polier und Vorarbeiter auf dem Bau weiß ich nur zu gut, wie teuer eine nachträgliche Kernbohrung sein kann!
-Entwicklung von Tools & Plugins für DESITE
-
-Der zweite Schwerpunkt meiner Tätigkeit liegt in der Entwicklung maßgeschneiderter Tools und Plugins für das Programm DESITE / VDC Manager. Mit einem besonderen Fokus auf Automatisierungsmethoden und einer benutzerfreundlichen Benutzeroberfläche (UI) entwickle ich Lösungen, die den Umgang mit BIM-Daten erheblich erleichtern. Meine Tools ermöglichen es den Nutzern, wiederkehrende Aufgaben zu automatisieren und komplexe Daten auf intuitive Weise zu visualisieren, was die Effizienz und Genauigkeit der Projektarbeit steigert.
-
-Durch die Kombination dieser beiden Tätigkeitsfelder trage ich maßgeblich zur Verbesserung der BIM-Prozesse und zur erfolgreichen Durchführung von Bauprojekten bei.' title="BIM Gesamtkoordinator"
-              </v-expansion-panel>
-              <v-expansion-panel value="bar" text='
-                 Ich arbeite viel mit dem Vue.js Ökosystem.
-                 ' title="BIM Entwickler">
-              </v-expansion-panel>
-              <v-expansion-panel value="baz" title="PLANSITE">
-                <v-expansion-panel-text>
-                  <v-btn icon href="local" target="_blank" class="mx-3" color="primary">
-                    <v-icon>mdi-github</v-icon>
-                  </v-btn>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-          </v-expansion-panels>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-container class="">
-
-      <v-row justify="center" class="border-b">
-        <v-col col="4">
-          <div>
-            <p class="text-primary text-center font-weight-bold text-h3">Weiter Aktivitäten</p>
-            <p class="text-center text-body-1">Nebenberufliche Aktivitäten und Interessen.</p>
-            <!-- <p class="text-body-1 text-medium-emphasis">
-            Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein
-            Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
-            <br>
-            <b>#1 Open BIM-Modelle & Kollaborationsplattformen</b>
-            <br>
-          </p> -->
-          </div>
-        </v-col>
-      </v-row>
-
-      <v-row justify="space-around">
-
-        <v-col class="d-flex flex-column justify-center" lg="6" align-self="center">
-
-        </v-col>
-        <v-col lg="6" class="" align-self="center">
-          <p class="text-center"></p>
-          <v-expansion-panels class="my-4" variant="popout">
-            <v-expansion-panel text='
-                Als BIM-Koordinator und Entwickler konzentriere ich mich darauf, Modelle leicht zugänglich zu machen und innovative Lösungen zu schaffen, die den gesamten BIM-Prozess optimieren. Mein Arbeitsalltag teilt sich in zwei zentrale Bereiche auf:
-Open BIM-Modelle & Kollaborationsplattformen
-Ein wesentlicher Teil meiner Arbeit besteht darin, Open BIM-Modelle aus verschiedenen Autorensystemen zu konsolidieren und in eine zentrale Kollaborationsplattform zu integrieren – alles basierend auf dem IFC-Format.
-
-Kollisionsprüfungen und Attributsprüfungen spielen in diesem Prozess eine entscheidende Rolle. Ich stelle sicher, dass alle relevanten Informationen und Daten konsistent und korrekt in den Modellen vorhanden sind. Diese beiden Prüfungen sind entscheidend, um die Qualität und Integrität der BIM-Modelle zu gewährleisten und das Risiko von Fehlern im Bauprozess zu minimieren.
-
-Als langjähriger Polier und Vorarbeiter auf dem Bau weiß ich nur zu gut, wie teuer eine nachträgliche Kernbohrung sein kann!
-Entwicklung von Tools & Plugins für DESITE
-
-Der zweite Schwerpunkt meiner Tätigkeit liegt in der Entwicklung maßgeschneiderter Tools und Plugins für das Programm DESITE / VDC Manager. Mit einem besonderen Fokus auf Automatisierungsmethoden und einer benutzerfreundlichen Benutzeroberfläche (UI) entwickle ich Lösungen, die den Umgang mit BIM-Daten erheblich erleichtern. Meine Tools ermöglichen es den Nutzern, wiederkehrende Aufgaben zu automatisieren und komplexe Daten auf intuitive Weise zu visualisieren, was die Effizienz und Genauigkeit der Projektarbeit steigert.
-
-Durch die Kombination dieser beiden Tätigkeitsfelder trage ich maßgeblich zur Verbesserung der BIM-Prozesse und zur erfolgreichen Durchführung von Bauprojekten bei.' title="Familie"
-              </v-expansion-panel>
-              <v-expansion-panel text='
-                 Ich arbeite viel mit dem Vue.js Ökosystem.
-                 ' title="Linux und Entwicklung">
-              </v-expansion-panel>
-              <v-expansion-panel title="3D-Druck">
-                <v-expansion-panel-text>
-                  <v-btn icon href="local" target="_blank" class="mx-3" color="primary">
-                    <v-icon>mdi-github</v-icon>
-                  </v-btn>
-                </v-expansion-panel-text>
-              </v-expansion-panel>
-          </v-expansion-panels>
-        </v-col>
-      </v-row>
-    </v-container>
-  </v-app>
+  </v-main>
 </template>
+<style scoped>
+.v-bg {
+  filter: blur(56px);
+  pointer-events: none;
+}
+
+.v-bg>div {
+  background: linear-gradient(to bottom right,
+      rgb(var(--v-theme-primary)),
+      rgb(var(--v-theme-error)));
+  z-index: -10;
+  clip-path: polygon(20% 50%, 27% 66%, 41% 66%, 50% 50%, 41% 34%, 27% 34%, 20% 50%, 55% 50%, 62% 66%, 76% 66%, 85% 50%, 76% 34%, 62% 34%, 55% 50%, 30% 50%, 37% 66%, 51% 66%, 60% 50%, 51% 34%, 37% 34%, 30% 50%);
+}
+</style>

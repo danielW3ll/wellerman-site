@@ -1,102 +1,75 @@
-<script setup>
-import { ref } from 'vue'
-import { useDisplay } from 'vuetify'
-
-const { mdAndDown } = useDisplay()
-const drawer = ref(null)
-
-// Watcher on smAndUp
-onMounted(() => {
-  console.log('Mounted')
-  // if (mdAndDown) {
-  //   drawer.value = false
-  // }
-})
-</script>
 <template>
   <v-app>
-    <!-- <v-navigation-drawer :width="250" mobile-breakpoint="md" style="top: 0px; bottom: 0px;"> -->
-    <v-navigation-drawer v-model="drawer" mobile-breakpoint="md" :width="250" style="top: 0px; bottom: 0px;">
-      <v-row class="align-center justify-center flex-column fill-height pt-8 mx-0">
-        <h2 class="text-h2 font-weight-black text-primary mb-2">DW</h2>
-        <div class="text-h5 mb-2">Daniel Wellermann</div>
-        <p class="font-weight-thin mb-5">BIM-Magier und Maker</p>
-        <!-- <v-list-item link title="List Item 1"></v-list-item>
-        <v-list-item link title="List Itemsadasdasd 2"></v-list-item>
-        <v-list-item link title="List Item 3"></v-list-item> -->
-        <!-- About Me -->
-        <div class="my-1">
-          <v-btn variant="text" class="font-weight-light" to="/">START</v-btn>
-        </div>
-        <!-- Blog & Docs -->
-        <!-- W-Helfer (utilities für den Alltag ) -->
-        <div class="my-1">
-          <v-btn variant="text" class="" to="/about" disabled>
-            <template v-slot:append>
-              <v-badge class="ms-2 mb-4" color="purple" content="Soon!">
-              </v-badge>
-            </template>
-            <span class="text-primary font-weight-bold">W</span>
-            <span>Blog & DOCS</span>
-          </v-btn>
-        </div>
-        <div class="my-1">
-          <v-btn variant="text" class="" to="/about" disabled>
-            <template v-slot:append>
-              <v-badge class="ms-2 mb-4" color="purple" content="Soon!">
-              </v-badge>
-            </template>
-            <span class="text-primary font-weight-bold">W</span><span>-Helfer</span>
-          </v-btn>
-        </div>
-        <!-- Naturbaukasten App für Ökobaudat ?  -->
-        <div class="my-1" hidden>
-          <v-btn variant="text" class="" disabled>
-            <template v-slot:append>
-              <v-badge class="ms-2 mb-4" color="amber" content="APP">
-              </v-badge>
-            </template>
-            <span>Naturbaukasten.de</span>
-          </v-btn>
-        </div>
+    <v-app-bar app color="transparent" class="pt-2 hidden-sm-and-down " flat>
+      <v-row class="">
+        <v-col cols="" class="d-flex justify-center align-center">
+          <v-card color="" class="pa-3 rounded-lg d-flex justify-center align-center">
+            <span class="text-h5">wllmnn</span>
+            <!-- Hier hinter die Aktive Seite als span anzeigen -->
 
-        <!-- Kontakt -->
-        <div class="my-1">
-          <v-btn variant="text" class="font-weight-light text-amber" disabled>Get in Touch!</v-btn>
-        </div>
-        <!-- Footer  Github and Socials -->
-        <div class="mt-auto mb-4">
-          <v-btn icon href="https://github.com/danielW3ll" target="_blank" class="mx-3">
-            <v-icon>mdi-github</v-icon>
-          </v-btn>
-          <v-btn icon href="https://de.linkedin.com/in/wellermann" target="_blank" class="mx-3">
-            <v-icon>mdi-linkedin</v-icon>
-          </v-btn>
-          <v-btn icon href="https://www.instagram.com/daniel_wellermann" target="_blank" class="mx-3">
-            <v-icon>mdi-instagram</v-icon>
-          </v-btn>
-        </div>
+            <span class="text-primary font-weight-medium text-h5">$</span>
+            <span class="text-h5 me-2">_</span>
+            <v-btn v-for="menue in menue" :key="menue.icon" class="mx-2 border border-opacity-100 text-none text-primary" :to="menue.href" variant="outlined" :prepend-icon="menue.icon">{{
+              menue.text }}</v-btn>
+            <!-- THEME SWITCHER -->
+            <!-- <v-btn class="mx-2 border-dashed border border-opacity-100 text-none" color="primary" variant="outlined" @click="console.log('toggle')" prepend-icon="mdi-theme-light-dark"> -->
+
+            <!-- </v-btn> -->
+            <!-- Languega Switcher de/en -->
+            <!-- <v-btn class="mx-2 border-dashed border border-opacity-100 text-none" color="primary" variant="outlined" @click="console.log('toggle')" prepend-icon="mdi-translate"> -->
+
+            <!-- </v-btn> -->
+          </v-card>
+        </v-col>
+
       </v-row>
-
-    </v-navigation-drawer>
-    <!-- <v-app-bar v-if="$vuetify.display.smAndDown" collapse elevation="7" class="">
-      <template v-slot:prepend>
-
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      </template>
-      <v-toolbar-title>Wellermann</v-toolbar-title>
-    </v-app-bar> -->
-
-    <!-- Floating Burger Button with v-fab-->
-
-    <v-main>
-
-      <!-- <v-fab @click="drawer = !drawer" icon="mdi-menu" location="top right" variant="tonal" app style="top: 0.5rem; right: 0.5rem"> -->
-      <!-- <v-fab @click="drawer = !drawer" :active="!$vuetify.display.smAndDown" icon="mdi-menu" location="top end" size="64" app appear color="primary">
-      </v-fab> -->
+    </v-app-bar>
+    <v-main class="pt-0" :class="$vuetify.display.mdAndDown ? 'pb-12' : ''">
       <slot />
-      <v-fab @click="drawer = !drawer" :active="$vuetify.display.smAndDown" icon="mdi-menu" location="bottom end" size="64" app appear color="primary">
-      </v-fab>
     </v-main>
+    <v-container class="position-fixed bottom-0 d-flex align-center justify-center " fluid>
+      <!-- <v-card class="pa-3 rounded-lg border-sm d-flex justify-center align-center"> -->
+
+      <!-- Hier hinter die Aktive Seite als span anzeigen -->
+
+      <v-menu location="top" class="">
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" size="x-large" class="border border-opacity-100 hidden-md-and-up ">
+            <span class="text-h5">wllmnn</span>
+            <span class="text-primary font-weight-medium text-h5 ">$</span>
+            <span class="text-h5 text-white elementToFadeInAndOut me-2">_</span>
+          </v-btn>
+        </template>
+        <v-btn v-for="menue in menue" :key="menue.icon" class="my-2 border border-opacity-100 text-none text-primary" :to="menue.href" :prepend-icon="menue.icon" density="default">{{
+          menue.text }}</v-btn>
+      </v-menu>
+      <!-- </v-card> -->
+    </v-container>
   </v-app>
 </template>
+<script setup>
+const activatorMenu = ref(false)
+const menue = [
+  {
+    icon: 'mdi-home-outline',
+    text: '~/',
+    href: '/',
+  },
+  {
+    icon: 'mdi-post-outline',
+    text: '~/docs',
+    href: '/docs',
+  },
+  {
+    icon: 'mdi-apps',
+    text: '~/projects',
+    href: '/projects',
+  },
+  {
+    icon: 'mdi-account-box-outline',
+    text: '~/contact',
+    href: '/contact',
+  },
+]
+</script>
+<style scoped></style>
