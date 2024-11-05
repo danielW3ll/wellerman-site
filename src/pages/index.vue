@@ -45,13 +45,14 @@ const menue = [
 
   <!-- HEader Menü Sticky -->
   <v-main class="">
-    <v-container class="h-100 d-flex align-center justify-center ">
+    <v-container class="d-flex align-center justify-center ">
 
 
-      <div class="w-100 w-md-50 text-center">
+      <div class="w-100 w-md-75 text-center">
 
         <div class="d-flex justify-center " align-self="center">
-          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 " style="max-width: 250px;"></v-img>
+          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 " style="max-width: 250px;" lazy-src="/public/ich.jpeg" alt="Daniel Wellermann"></v-img>
+          <!-- <NuxtImg src="/public/ich.jpeg" class="rounded-lg elevation-5 " loading="lazy" /> -->
         </div>
 
         <!-- <v-chip border="thin opacity-25" color="surface" variant="flat">
@@ -62,20 +63,24 @@ const menue = [
 
 
         <h1 class="text-h4 text-h3 font-weight-bold my-6">
-          Die Effizienz von einem, das Talent von drei.
+          Mein Workspace im Netz
         </h1>
 
-        <div class="text-body-1  ">
-          BIM-Koordinator, Entwickler und Maker!
+        <div class="text-body-1  pt-4">
+          BIM-Koordinator, Entwickler und Maker.
         </div>
         <div class="text-body-1 text-medium-emphasis mb-10">
-          Bissl zu wild der Slogan oder? Ich denk mir noch was neues aus. Aber das trifft es schon ganz gut.
+          Willkommen in meinem virtuellen Workspace!
+          Hauptberuflich bin ich BIM-Koordinator und Entwickler.
+          In meiner Freizeit bin ich passionierter Maker und Tüftler.
+          Meine Interessen liegen bei GNU/Linux, Open Source Software und IT.
+          Dazu gehört eine voll ausgestattete Werkstatt mit Werkzeugen, Drehbank und 3D-Drucker.
         </div>
         <!-- <div class="text-body-1 text-medium-emphasis mb-10">
           Mit meiner Erfahrung auf dem Bau und meiner langjährigen Affinität zu GNU/Linux und IT steht die Fachlichkeit bei der Digitalisierung im Vordergrund.
         </div> -->
 
-        <div class="d-flex ga-4 justify-space-around">
+        <div class="d-flex ga-4 justify-space-around pt-8">
           <v-card color="" class="pa-3 rounded-lg d-flex ">
             <v-btn v-for="social in socials" :key="social.icon" icon :href="social.href" target="_blank" class=" mx-2 border border-opacity-100 text-none text-primary" variant="outlined">
               <v-icon>{{ social.icon }}</v-icon>
