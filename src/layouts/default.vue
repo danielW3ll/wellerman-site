@@ -51,14 +51,14 @@
 
       <v-menu location="top" class="">
         <template v-slot:activator="{ props }">
-          <v-btn v-bind="props" size="x-large" class="border border-opacity-100 hidden-md-and-up w-50 ">
+          <v-btn v-bind="props" size="x-large" class="border border-opacity-100 hidden-md-and-up w-100 ">
             wellermann
             <v-icon class="text-primary">mdi-menu</v-icon>
             <!-- <span class="text-primary font-weight-medium text-h5 ">$</span> -->
             <span class="text-h5 text-white elementToFadeInAndOut ">_</span>
           </v-btn>
         </template>
-        <v-btn v-for="menue in menue" :key="menue.icon" class="my-2 border border-opacity-100 text-none text-primary" :to="menue.href" :prepend-icon="menue.icon" density="default">{{
+        <v-btn v-for="menue in menue" :key="menue.icon" class=" ms-auto my-2 border border-opacity-100 text-none text-primary w-50" :to="menue.href" :prepend-icon="menue.icon" density="default">{{
           menue.text }}</v-btn>
       </v-menu>
       <!-- </v-card> -->
