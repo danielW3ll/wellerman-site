@@ -1,21 +1,35 @@
 <script setup>
-
 const pageName = 'docs'
 
 useHead({
-
-  title: `${pageName}- wellermann`,
+  title: `Blog, Dokumentationen`,
   meta: [
-    { name: 'description', content: 'Technische Dokumentationen und Ressourcen für BIM, Entwicklung und Open Source Software.' },
-    { name: 'keywords', content: 'Dokumentation, BIM, Entwickler, Open Source, GNU/Linux, Ressourcen' },
+    {
+      name: 'description',
+      content:
+        'Technische Dokumentationen und Ressourcen für BIM, Entwicklung und Open Source Software.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'Dokumentation, BIM, Entwickler, Open Source, GNU/Linux, Ressourcen',
+    },
     { property: 'og:title', content: 'Dokumentation - wellermann' },
-    { property: 'og:description', content: 'Detaillierte Dokumentation und Ressourcen für BIM-Koordinierung, GNU/Linux und Open Source Software.' },
+    {
+      property: 'og:description',
+      content:
+        'Detaillierte Dokumentation und Ressourcen für BIM-Koordinierung, GNU/Linux und Open Source Software.',
+    },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Dokumentation - wellermann' },
-    { name: 'twitter:description', content: 'Technische Dokumentation zu BIM, Open Source Software und GNU/Linux.' },
-  ]
-});
+    {
+      name: 'twitter:description',
+      content:
+        'Technische Dokumentation zu BIM, Open Source Software und GNU/Linux.',
+    },
+  ],
+})
 const docs = [
   // {
   //   type : 'blog', // blog, doc, pub

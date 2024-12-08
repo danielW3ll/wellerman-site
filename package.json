@@ -9,10 +9,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "check": "biome check src/",
+    "check:write": "biome check --write src/",
     "format": "biome format --write src/"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
+    "@nuxtjs/robots": "^5.0.1",
+    "@nuxtjs/seo": "^2.0.2",
+    "@nuxtjs/sitemap": "^7.0.0",
     "nuxt": "^3.12.3",
     "vue": "latest"
   },

@@ -1,36 +1,49 @@
 <script setup>
-
 const pageName = 'projects'
 
 useHead({
-
-  title: `${pageName} - wellermann`,
+  title: `Projekte, Produkte`,
   meta: [
-    { name: 'description', content: 'Eine Übersicht über meine Projekte in den Bereichen BIM-Koordination, Entwicklung, GNU/Linux, Open Source Software und Maker-Kreationen.' },
-    { name: 'keywords', content: 'Projekte, BIM, Entwickler, GNU/Linux, OSS, IT, Maker, Werkstatt' },
+    {
+      name: 'description',
+      content:
+        'Eine Übersicht über meine Projekte in den Bereichen BIM-Koordination, Entwicklung, GNU/Linux, Open Source Software und Maker-Kreationen.',
+    },
+    {
+      name: 'keywords',
+      content:
+        'Projekte, BIM, Entwickler, GNU/Linux, OSS, IT, Maker, Werkstatt',
+    },
     { property: 'og:title', content: 'Projekte - Mein Open Space' },
-    { property: 'og:description', content: 'Erfahre mehr über meine Projekte in BIM-Koordination, Open Source Software, GNU/Linux und DIY-Maker-Projekten.' },
+    {
+      property: 'og:description',
+      content:
+        'Erfahre mehr über meine Projekte in BIM-Koordination, Open Source Software, GNU/Linux und DIY-Maker-Projekten.',
+    },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://wellermann.de/projects' },
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: 'Projekte - Mein Open Space' },
-    { name: 'twitter:description', content: 'Eine Sammlung meiner BIM, Open Source, GNU/Linux und Maker-Projekte.' },
-  ]
+    {
+      name: 'twitter:description',
+      content:
+        'Eine Sammlung meiner BIM, Open Source, GNU/Linux und Maker-Projekte.',
+    },
+  ],
 })
-
 
 const projects = [
   {
     active: false,
     date: 2023,
     title: 'Field Target Score Card',
-    description: 'Die Fieldtarget Scorecard Web-App ist mein persönliches Projekt. Das ich in erster Linie für mich selbst entwickle, um meine Leistung beim Schießen zu verfolgen und zu verbessern. Gleichzeitig möchte ich es aber auch allen anderen Fieldtarget-Schützen zur Verfügung stellen.',
+    description:
+      'Die Fieldtarget Scorecard Web-App ist mein persönliches Projekt. Das ich in erster Linie für mich selbst entwickle, um meine Leistung beim Schießen zu verfolgen und zu verbessern. Gleichzeitig möchte ich es aber auch allen anderen Fieldtarget-Schützen zur Verfügung stellen.',
     link: '',
     linkExtern: ['https://fieldtarget-event.com/'],
-    category: ['Digital Product']
-  }
+    category: ['Digital Product'],
+  },
 ]
-
 </script>
 <template>
   <v-container class="w-lg-75">

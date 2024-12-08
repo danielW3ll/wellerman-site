@@ -32,7 +32,7 @@ const menue = [
       <div class="w-100 w-md-75 text-center">
 
         <div class="d-flex justify-center " align-self="center">
-          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 " style="max-width: 250px;" lazy-src="/public/ich.jpeg" alt="Daniel Wellermann"></v-img>
+          <v-img src="/public/ich.jpeg" class="rounded-lg elevation-5 " style="max-width: 250px;" lazy-src="/public/ichpreload.jpeg" alt="Daniel Wellermann"></v-img>
           <!-- <NuxtImg src="/public/ich.jpeg" class="rounded-lg elevation-5 " loading="lazy" /> -->
         </div>
 
@@ -43,39 +43,39 @@ const menue = [
 
 
 
-        <h1 class="text-h4 text-h3 font-weight-bold my-6">
-          Mein Workspace im Netz
+        <h1 class="text-h5 font-weight-bold my-6">
+          Willkommen in meinem Workspace!
         </h1>
 
-        <div class="text-body-1  pt-4">
+        <!-- <div class="text-body-1  pt-4">
           BIM-Koordinator, Entwickler und Maker.
+          Ich bin Daniel Wellermann aus Velen.
+        </div> -->
+        <div class="text-body-1 text-medium-emphasis mb-10">
+          Ich bin BIM-Koordinator und Entwickler mit Leidenschaft für Technik. In meiner Freizeit lebe ich meine Begeisterung als Maker und Tüftler aus. <br> Meine Interessen: GNU/Linux, Open Source
+          Software, 3D-Druck und IT im Allgemeinen.
         </div>
         <div class="text-body-1 text-medium-emphasis mb-10">
-          Willkommen in meinem virtuellen Workspace!
-          Hauptberuflich bin ich BIM-Koordinator und Entwickler.
-          In meiner Freizeit bin ich passionierter Maker und Tüftler.
-          Meine Interessen liegen bei GNU/Linux, Open Source Software und IT.
-          Dazu gehört eine voll ausgestattete Werkstatt mit Werkzeugen, Drehbank und 3D-Drucker.
+          Mit freundlichen Grüßen aus Velen
+          <br>
+          Daniel Wellermann
         </div>
-        <!-- <div class="text-body-1 text-medium-emphasis mb-10">
-          Mit meiner Erfahrung auf dem Bau und meiner langjährigen Affinität zu GNU/Linux und IT steht die Fachlichkeit bei der Digitalisierung im Vordergrund.
-        </div> -->
 
         <div class="d-flex ga-4 justify-space-around pt-8">
-
+          <social-icons mode-style="default" />
           <!-- <v-btn class="text-none" color="primary" flat rounded="lg" text="Get started" />
 
           <v-btn append-icon="mdi-chevron-right" class="text-none" flat rounded="lg" text="Learn more" /> -->
         </div>
 
-        <div class="text-body-1 my-6">
+        <!-- <div class="text-body-1 my-6">
           <span>
             Seite befindet sich noch im Aufbau
           </span>
           <span class="text-primary">
             ;)
           </span>
-        </div>
+        </div> -->
 
       </div>
 

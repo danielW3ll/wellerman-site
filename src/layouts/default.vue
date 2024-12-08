@@ -4,11 +4,12 @@
       <v-row class="">
         <v-col cols="" class="d-flex justify-center align-center">
           <v-card color="" class="pa-3 rounded-lg d-flex justify-center align-center">
-            <span class="text-h5">wellermann</span>
+            <span class="text-w">WELLERMANN</span>
             <!-- Hier hinter die Aktive Seite als span anzeigen -->
 
             <span class="text-primary font-weight-medium text-h5">$</span>
-            <span class="text-h5 me-2">_</span>
+            <span v-if="routePath !== '/'" class="text-h5 me-2 ">_</span>
+            <span v-else class="text-h5 me-2 elementToFadeInAndOut">_</span>
             <v-btn v-for="menue in menue" :key="menue.icon" class="mx-2 border border-opacity-100 text-none text-primary" :to="menue.href" variant="outlined" :prepend-icon="menue.icon">{{
               menue.text }}</v-btn>
             <!-- THEME SWITCHER -->
@@ -58,8 +59,9 @@
             <span class="text-h5 text-white elementToFadeInAndOut ">_</span>
           </v-btn>
         </template>
-        <v-btn v-for="menue in menue" :key="menue.icon" class=" ms-auto my-2 border border-opacity-100 text-none text-primary w-50" :to="menue.href" :prepend-icon="menue.icon" density="default">{{
-          menue.text }}</v-btn>
+        <v-btn v-for="menue in menue" :key="menue.icon" class=" ms-auto me-auto my-2 border border-opacity-100 text-none text-primary w-50" :to="menue.href" :prepend-icon="menue.icon"
+          density="default">{{
+            menue.text }}</v-btn>
       </v-menu>
       <!-- </v-card> -->
     </v-container>
@@ -89,5 +91,27 @@ const menue = [
     href: '/contact',
   },
 ]
+
+// Get Route
+const route = useRoute()
+const routePath = ref()
+watch(
+  () => route.path,
+  () => {
+    routePath.value = route.path
+    console.log(routePath.value)
+  },
+)
+
+onBeforeMount(() => {
+  routePath.value = route.path
+  console.log(routePath.value)
+})
 </script>
-<style scoped></style>
+<style scoped>
+.text-w {
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.0892857143em;
+}
+</style>
