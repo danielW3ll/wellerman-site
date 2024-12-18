@@ -35,9 +35,9 @@ useHead({
   <v-container class="w-lg-75">
     <HeaderComp class="" :name="pageName" />
     <p class="text-subtitle-1 text-medium-emphasis mb-6 mt-2">
-      Wer schreibt schon gerne eine E-Mail?
-      <br>
-      Der schnellste Weg zu mir ist über die sozialen Medien ;)
+      <!-- Wer schreibt schon gerne eine E-Mail?
+      <br> -->
+      Der schnellste Weg zu mir ist über die sozialen Medien
     </p>
     <SocialIcons mode-style="list" />
   </v-container>

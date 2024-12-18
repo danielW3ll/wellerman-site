@@ -8,7 +8,6 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
-
   css: ['~/assets/main.css'],
   app: {
     head:{
