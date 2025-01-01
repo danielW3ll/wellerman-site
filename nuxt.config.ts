@@ -10,7 +10,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/main.css'],
   app: {
-    head:{
+    head: {
       htmlAttrs: {
         lang: 'de',
       },
@@ -61,9 +61,9 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-'@nuxtjs/seo'
+    '@nuxtjs/seo',
   ],
-  site:{
+  site: {
     url: 'https://wellermann.de',
     name: 'Wellermann.de',
   },

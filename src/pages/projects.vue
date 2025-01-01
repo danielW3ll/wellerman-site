@@ -2,7 +2,7 @@
 const pageName = 'projects'
 
 useHead({
-  title: `Projekte, Produkte`,
+  title: 'Projekte, Produkte',
   meta: [
     {
       name: 'description',
@@ -46,7 +46,7 @@ const projects = [
 ]
 </script>
 <template>
-  <v-container class="w-lg-75">
+  <v-container class="w-lg-75 h-screen">
     <HeaderComp class="" :name="pageName" />
     <p class="text-subtitle-1 text-medium-emphasis mb-6 mt-2">Meine Projekte</p>
     <v-row justify="center">

@@ -2,7 +2,7 @@
 const pageName = 'contact'
 
 useHead({
-  title: `Kontakt`,
+  title: 'Kontakt',
   meta: [
     {
       name: 'description',

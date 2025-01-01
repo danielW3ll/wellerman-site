@@ -2,7 +2,7 @@
 const pageName = 'docs'
 
 useHead({
-  title: `Blog, Dokumentationen`,
+  title: 'Blog, Dokumentationen',
   meta: [
     {
       name: 'description',
@@ -43,7 +43,7 @@ const docs = [
 ]
 </script>
 <template>
-  <v-container class="w-lg-75">
+  <v-container class="w-lg-75 h-screen">
     <HeaderComp class="" :name="pageName" />
     <p class="text-subtitle-1 text-medium-emphasis mb-6 mt-2">Hier gibt es Blog beiträge, Dokumentationen und Veröffentlichungen</p>
     <v-row justify="center">
